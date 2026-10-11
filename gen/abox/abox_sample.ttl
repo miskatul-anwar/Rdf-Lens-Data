@@ -1,0 +1,343 @@
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix dt: <http://dbpedia.org/datatype/> .
+@prefix ex: <http://example.org/ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix georss: <http://www.georss.org/georss/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dbr:Alabama a dbo:AdministrativeRegion,
+        dbo:Place,
+        dbo:PopulatedPlace,
+        schema:AdministrativeArea,
+        schema:Place,
+        owl:Thing ;
+    dbo:areaLand 1.31426e+11 ;
+    dbo:areaTotal 1.35765e+11 ;
+    dbo:areaWater 4.338e+09 ;
+    dbo:capital <http://dbpedia.org/resource/Montgomery,_Alabama> ;
+    dbo:country dbr:United_States ;
+    dbo:demonym "Alabamian"@en ;
+    dbo:language dbr:English_American ;
+    dbo:largestCity <http://dbpedia.org/resource/Birmingham,_Alabama> ;
+    dbo:maximumElevation 7.355e+02 ;
+    dbo:minimumElevation 0e+00 ;
+    foaf:name "State of Alabama"@en .
+
+<http://dbpedia.org/resource/Apple_Inc.> a dbo:Agent,
+        dbo:Company,
+        dbo:Organisation,
+        schema:Organization,
+        owl:Thing ;
+    dbo:assets "1.16371E11"^^dt:usDollar ;
+    dbo:equity "7.6615E10"^^dt:usDollar ;
+    dbo:foundationPlace dbr:Corporation ;
+    dbo:foundingDate "1976-04-01"^^xsd:date ;
+    dbo:foundingYear "1976"^^xsd:gYear ;
+    dbo:locationCity dbr:Apple_Campus,
+        dbr:California,
+        <http://dbpedia.org/resource/Cupertino,_California>,
+        dbr:Infinite_Loop_\(street\) ;
+    dbo:locationCountry dbr:United_States ;
+    dbo:netIncome "2.5922E10"^^dt:usDollar ;
+    dbo:numberOfEmployees "60400"^^xsd:nonNegativeInteger ;
+    dbo:operatingIncome "3.379E10"^^dt:usDollar ;
+    dbo:type dbr:Public_company ;
+    foaf:name "Apple Inc."@en .
+
+dbr:Aristotle a dbo:Agent,
+        dbo:Person,
+        dbo:Philosopher,
+        schema:Person,
+        owl:Thing,
+        foaf:Person ;
+    dbo:birthYear "-0384"^^xsd:gYear ;
+    dbo:deathYear "-0322"^^xsd:gYear ;
+    dbo:era dbr:Ancient_philosophy ;
+    dbo:influenced dbr:Albertus_Magnus,
+        dbr:Alexander_the_Great,
+        dbr:Averroes,
+        dbr:Avicenna,
+        dbr:Christian_philosophy,
+        dbr:Duns_Scotus,
+        dbr:Galileo_Galilei,
+        dbr:Islamic_philosophy,
+        dbr:Jewish_philosophy,
+        dbr:List_of_writers_influenced_by_Aristotle,
+        dbr:Maimonides,
+        dbr:Nicolaus_Copernicus,
+        dbr:Ptolemy,
+        dbr:Science,
+        dbr:Thomas_Aquinas,
+        dbr:Western_philosophy ;
+    dbo:influencedBy dbr:Democritus,
+        dbr:Heraclitus,
+        dbr:Parmenides,
+        dbr:Plato,
+        dbr:Socrates ;
+    dbo:mainInterest dbr:Biology,
+        dbr:Ethics,
+        dbr:Government,
+        dbr:Metaphysics,
+        dbr:Music,
+        dbr:Physics,
+        dbr:Poetry,
+        dbr:Politics,
+        dbr:Rhetoric,
+        dbr:Theatre,
+        dbr:Zoology ;
+    dbo:notableIdea dbr:Golden_mean_\(philosophy\),
+        dbr:Logic,
+        dbr:Reason,
+        dbr:Syllogism ;
+    dbo:philosophicalSchool dbr:Aristotelianism,
+        dbr:Peripatetic_school ;
+    dbo:region dbr:Western_philosophy ;
+    foaf:name ", Aristotélēs"@en .
+
+dbr:Autism a dbo:Disease,
+        owl:Thing ;
+    dbo:diseasesdb "1142"@en ;
+    dbo:emedicineSubject "med"@en ;
+    dbo:emedicineTopic "3202"@en ;
+    dbo:icd9 "299.00"@en ;
+    dbo:medlineplus "001526"@en ;
+    dbo:meshId "D001321"@en ;
+    dbo:omim 209850 ;
+    foaf:name "Autism"@en .
+
+dbr:Neil_Armstrong a dbo:Agent,
+        dbo:Astronaut,
+        dbo:Person,
+        schema:Person,
+        owl:Thing,
+        foaf:Person ;
+    dbo:mission dbr:Apollo_11,
+        dbr:Gemini_8 ;
+    dbo:occupation dbr:Naval_aviation,
+        dbr:Test_pilot ;
+    dbo:selection dbr:List_of_astronauts_by_year_of_selection,
+        dbr:NASA_Astronaut_Group_2 ;
+    dbo:status "Retired"@en ;
+    dbo:timeInSpace 3.1e+01,
+        7.4232e+05 ;
+    dbo:type dbr:NASA,
+        dbr:United_States_Air_Force ;
+    foaf:name "Neil Armstrong"@en .
+
+dbr:Tim_Berners-Lee a dbo:Agent,
+        dbo:Person,
+        schema:Person,
+        owl:Thing,
+        foaf:Person ;
+    dbo:almaMater <http://dbpedia.org/resource/The_Queen's_College,_Oxford> ;
+    dbo:birthDate "1955-06-08"^^xsd:date ;
+    dbo:birthName "Timothy John Berners-Lee"@en ;
+    dbo:birthYear "1955"^^xsd:gYear ;
+    dbo:occupation dbr:Computer_scientist,
+        dbr:Tim_Berners-Lee__1 ;
+    dbo:personFunction dbr:Tim_Berners-Lee__2 ;
+    dbo:religion dbr:Unitarian_Universalism ;
+    dbo:residence dbr:Massachusetts ;
+    dbo:title "Professor"@en ;
+    foaf:homepage <http://www.w3.org/People/Berners-Lee/> ;
+    foaf:name "Sir Tim Berners-Lee"@en .
+
+ex:user1 a ex:Person ;
+    ex:bought ex:product1 ;
+    ex:friend ex:user3 ;
+    ex:gave ex:rating1 ;
+    ex:hasAge 28 ;
+    ex:hasName "Bill" ;
+    ex:inCity "Madrid" ;
+    ex:worksWith ex:user2 ;
+    ex:wrote ex:post1,
+        ex:post2 .
+
+dbr:Animal_Farm a dbo:Book,
+        dbo:Work,
+        dbo:WrittenWork,
+        bibo:Book,
+        schema:Book,
+        schema:CreativeWork,
+        owl:Thing ;
+    dbo:author dbr:George_Orwell ;
+    dbo:dcc "823/.912 20"@en ;
+    dbo:isbn "ISBN 0-452-28424-4 (present) ISBN 978-0-452-28424-1"@en ;
+    dbo:lcc "PR6029.R8 A63 2003b"@en ;
+    dbo:numberOfPages "112"^^xsd:positiveInteger ;
+    dbo:oclc "53163540"@en ;
+    dbo:previousWork <http://dbpedia.org/resource/The_Lion_and_the_Unicorn:_Socialism_and_the_English_Genius> ;
+    dbo:publisher dbr:Harvill_Secker ;
+    dbo:subsequentWork dbr:Nineteen_Eighty-Four ;
+    foaf:name "Animal Farm"@en,
+        "Animal Farm: A Fairy Story"@en .
+
+dbr:France a dbo:Country,
+        dbo:Place,
+        dbo:PopulatedPlace,
+        schema:Country,
+        schema:Place,
+        <http://www.opengis.net/gml/_Feature>,
+        owl:Thing ;
+    dbo:anthem dbr:La_Marseillaise ;
+    dbo:areaTotal 6.748421e+11,
+        6.74843e+11 ;
+    dbo:capital dbr:Paris ;
+    dbo:currency dbr:CFP_franc ;
+    dbo:demonym "French"@en ;
+    dbo:governmentType dbr:Unitary_state ;
+    dbo:language dbr:French_language ;
+    dbo:largestCity dbr:Prefectures_in_France ;
+    dbo:leaderName dbr:François_Hollande,
+        dbr:Jean-Marc_Ayrault ;
+    dbo:leaderTitle "President"@en,
+        "Prime Minister"@en ;
+    dbo:longName "French Republic"@en ;
+    dbo:motto "(Liberty, Equality, Fraternity)"@en ;
+    dbo:officialLanguage dbr:French_language ;
+    dbo:populationDensity 1.16e+02,
+        1.162167e+02 ;
+    georss:point "48.85666666666667 2.350833333333333"@en ;
+    geo:lat "48.85666666666667"^^xsd:float ;
+    geo:long "2.350833333333333"^^xsd:float ;
+    foaf:name "France"@en .
+
+dbr:George_Orwell a dbo:Agent,
+        dbo:Artist,
+        dbo:Person,
+        dbo:Writer,
+        schema:Person,
+        owl:Thing,
+        foaf:Person ;
+    dbo:activeYearsEndYear "1950"^^xsd:gYear ;
+    dbo:activeYearsStartYear "1928"^^xsd:gYear ;
+    dbo:almaMater dbr:Eton_College ;
+    dbo:birthDate "1903-06-25"^^xsd:date ;
+    dbo:birthName "Eric Arthur Blair"@en ;
+    dbo:birthPlace dbr:Bihar,
+        dbr:Motihari,
+        dbr:Presidencies_and_provinces_of_British_India ;
+    dbo:deathDate "1950-01-21"^^xsd:date ;
+    dbo:deathPlace dbr:University_College_Hospital ;
+    dbo:genre dbr:Dystopia,
+        dbr:Roman_à_clef ;
+    dbo:influenced dbr:Albert_Camus,
+        dbr:Andrew_Sullivan,
+        dbr:Anthony_Burgess,
+        dbr:Chris_Hedges,
+        dbr:Christopher_Hitchens,
+        dbr:Cory_Doctorow,
+        dbr:Glenn_Greenwald,
+        dbr:Ignazio_Silone,
+        dbr:Joe_Sacco,
+        dbr:Johann_Hari,
+        dbr:John_King_\(author\),
+        dbr:Kurt_Vonnegut,
+        dbr:Margaret_Atwood,
+        dbr:Noam_Chomsky,
+        dbr:Peter_Hitchens,
+        dbr:Raoul_Vaneigem,
+        dbr:Ray_Bradbury,
+        dbr:Thomas_Pynchon ;
+    dbo:influencedBy dbr:Aldous_Huxley,
+        dbr:Arthur_Koestler,
+        dbr:Charles_Dickens,
+        dbr:Fyodor_Dostoyevsky,
+        dbr:Gustave_Flaubert,
+        dbr:H._G._Wells,
+        dbr:Henry_Fielding,
+        dbr:Jack_London,
+        dbr:James_Burnham,
+        dbr:James_Joyce,
+        dbr:Jonathan_Swift,
+        dbr:Leo_Tolstoy,
+        dbr:Leon_Trotsky,
+        dbr:Tom_Wintringham,
+        dbr:Upton_Sinclair,
+        dbr:W._Somerset_Maugham,
+        dbr:Yevgeny_Zamyatin,
+        dbr:Émile_Zola ;
+    dbo:notableWork dbr:Animal_Farm,
+        dbr:George_Orwell_bibliography,
+        dbr:Homage_to_Catalonia,
+        dbr:Nineteen_Eighty-Four ;
+    dbo:pseudonym "George Orwell"@en ;
+    dbo:restingPlace dbr:Sutton_Courtenay ;
+    dbo:spouse <http://dbpedia.org/resource/Eileen_O'Shaughnessy>,
+        dbr:Sonia_Brownell ;
+    skos:subject dbr:Anti-Stalinist_left,
+        dbr:Anti-fascism,
+        dbr:Democratic_socialism,
+        dbr:Literary_criticism,
+        dbr:Polemic ;
+    foaf:name "George Orwell"@en .
+
+dbr:Paris a dbo:Place,
+        dbo:PopulatedPlace,
+        dbo:Settlement,
+        schema:Place,
+        <http://www.opengis.net/gml/_Feature>,
+        owl:Thing ;
+    dbo:area 1.054e+08 ;
+    dbo:country dbr:France ;
+    dbo:mayor dbr:Bertrand_Delanoë ;
+    dbo:populationTotal "2211297"^^xsd:nonNegativeInteger ;
+    dbo:postalCode "75001-75020, 75116"@en ;
+    dbo:region dbr:Île-de-France_\(region\) ;
+    georss:point "48.8567 2.3508"@en ;
+    geo:lat "48.8567"^^xsd:float ;
+    geo:long "2.3508"^^xsd:float ;
+    foaf:homepage <http://www.paris.fr/> ;
+    foaf:name "Paris"@en .
+
+ex:post1 a ex:Message ;
+    ex:inBlog ex:blog1 .
+
+ex:post2 a ex:Message ;
+    ex:inBlog ex:blog1 .
+
+ex:post3 a ex:Message ;
+    ex:inBlog ex:blog2 .
+
+ex:post4 a ex:Message ;
+    ex:inBlog ex:blog2 .
+
+ex:rating1 a ex:Rating ;
+    ex:hasValue "good deal" ;
+    ex:on ex:product1 .
+
+ex:user2 a ex:Student ;
+    ex:hasAge 40 ;
+    ex:wrote ex:post3 .
+
+ex:user3 a ex:Person ;
+    ex:hasAge 35 ;
+    ex:inCity "NY" ;
+    ex:wrote ex:post4 .
+
+dbr:French_language a dbo:Language,
+        schema:Language,
+        owl:Thing ;
+    dbo:languageFamily dbr:Gallo-Iberian_languages,
+        dbr:Italic_languages,
+        dbr:Romance_languages,
+        dbr:Western_Romance_languages ;
+    dbo:languageRegulator dbr:Académie_française ;
+    foaf:name "French"@en,
+        "français"@en .
+
+ex:blog1 a ex:Blog .
+
+ex:blog2 a ex:Blog .
+
+ex:product1 a ex:SmartPhone ;
+    ex:hasBrand ex:brand1 ;
+    ex:hasName "William" ;
+    ex:hasPrice 400 .
+

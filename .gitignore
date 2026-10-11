@@ -1,8 +1,12 @@
-# Ignore large dataset archives and bulk dumps (prevents disk exhaustion)
+# Ignore archives and bulk dump files to protect disk space
 *.bz2
-data/instance_types_en.*
-data/mappingbased_properties_en.*
-data/specific_mappingbased_properties_en.*
+raw/data/instance_types_en.*
+raw/data/mappingbased_properties_en.*
+raw/data/specific_mappingbased_properties_en.*
+gen/abox/*.nt
+gen/abox/*.ttl
+!gen/abox/abox_sample.ttl
+!gen/abox/README.md
 
-# Temp / extracted files
-paper/paper.txt
+# Extracted paper text
+raw/paper/paper.txt
