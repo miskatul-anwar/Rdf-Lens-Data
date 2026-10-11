@@ -1,0 +1,87 @@
+@prefix : <http://example.org/ans#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################################
+# Analytical Schema (AnS) Graph Structure
+# From Section 4 (Figure 4) and Alexandra Roatis Thesis (Figure 7.2 & Table 7.1)
+# S = <N, E, lambda, delta>
+#################################################################################
+
+# Node definitions (lambda(n))
+:Blogger rdf:type rdfs:Class ;
+    rdfs:comment "delta(n1): q(?x) :- ?x rdf:type :Person, ?x :wrote ?y, ?y :inBlog ?z" .
+
+:Name rdf:type rdfs:Class ;
+    rdfs:comment "delta(n2): q(?x) :- ?y :hasName ?x" .
+
+:City rdf:type rdfs:Class ;
+    rdfs:comment "delta(n3): q(?x) :- ?y :inCity ?x" .
+
+:BlogPost rdf:type rdfs:Class ;
+    rdfs:comment "delta(n4): q(?x) :- ?x rdf:type :Message, ?x :inBlog ?z, ?z rdf:type :Blog" .
+
+:Site rdf:type rdfs:Class ;
+    rdfs:comment "delta(n5): q(?x) :- ?y :inBlog ?x, ?x rdf:type :Blog" .
+
+:Value rdf:type rdfs:Class ;
+    rdfs:comment "delta(n6): q(?x) :- ?z rdfs:range xsd:int, ?y ?z ?x" .
+
+:Item rdf:type rdfs:Class ;
+    rdfs:comment "delta(n7): q(?x) :- ?x rdf:type ?y, ?y rdfs:subClassOf :Product" .
+
+:Type rdf:type rdfs:Class ;
+    rdfs:comment "delta(n8): q(?x) :- ?x rdfs:subClassOf :Product" .
+
+# Edge definitions (lambda(e)) connecting nodes
+:acquaintedWith rdf:type rdf:Property ;
+    rdfs:domain :Blogger ;
+    rdfs:range :Blogger ;
+    rdfs:comment "delta(e1): q(?x, ?y) :- ?z rdfs:subPropertyOf :knows, ?x ?z ?y" .
+
+:identifiedBy rdf:type rdf:Property ;
+    rdfs:domain :Blogger ;
+    rdfs:range :Name ;
+    rdfs:comment "delta(e2): q(?x, ?y) :- ?x :hasName ?y" .
+
+:livesIn rdf:type rdf:Property ;
+    rdfs:domain :Blogger ;
+    rdfs:range :City ;
+    rdfs:comment "delta(e3): q(?x, ?y) :- ?x :inCity ?y" .
+
+:wrotePost rdf:type rdf:Property ;
+    rdfs:domain :Blogger ;
+    rdfs:range :BlogPost ;
+    rdfs:comment "delta(e4): q(?x, ?y) :- ?x :wrote ?y, ?y rdf:type :Message" .
+
+:postedOn rdf:type rdf:Property ;
+    rdfs:domain :BlogPost ;
+    rdfs:range :Site ;
+    rdfs:comment "delta(e5): q(?x, ?y) :- ?x rdf:type :Message, ?x :inBlog ?y" .
+
+:age rdf:type rdf:Property ;
+    rdfs:domain :Blogger ;
+    rdfs:range :Value ;
+    rdfs:comment "delta(e6): q(?x, ?y) :- ?x rdf:type :Person, ?x :hasAge ?y" .
+
+:purchased rdf:type rdf:Property ;
+    rdfs:domain :Blogger ;
+    rdfs:range :Item ;
+    rdfs:comment "delta(e7): q(?x, ?y) :- ?x :bought ?y" .
+
+:classifiedAs rdf:type rdf:Property ;
+    rdfs:domain :Item ;
+    rdfs:range :Type ;
+    rdfs:comment "delta(e8): q(?x, ?y) :- ?x rdf:type :Product, ?x rdf:type ?y" .
+
+:ratedBy rdf:type rdf:Property ;
+    rdfs:domain :Item ;
+    rdfs:range :Blogger ;
+    rdfs:comment "delta(e9): q(?x, ?y) :- ?y :gave ?z, ?z rdf:type :Rating, ?z :on ?x, ?x rdf:type :Product" .
+
+:cost rdf:type rdf:Property ;
+    rdfs:domain :Item ;
+    rdfs:range :Value ;
+    rdfs:comment "delta(e10): q(?x, ?y) :- ?x :hasPrice ?y" .

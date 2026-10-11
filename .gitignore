@@ -1,0 +1,8 @@
+# Ignore large dataset archives and bulk dumps (prevents disk exhaustion)
+*.bz2
+data/instance_types_en.*
+data/mappingbased_properties_en.*
+data/specific_mappingbased_properties_en.*
+
+# Temp / extracted files
+paper/paper.txt

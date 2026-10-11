@@ -1,0 +1,87 @@
+@prefix : <http://example.org/ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# RDF Schema Triples (Figure 3: Running example RDF Schema)
+#################################################################
+
+:SmartPhone rdfs:subClassOf :Phone .
+:Phone rdfs:subClassOf :Product .
+:Student rdfs:subClassOf :Person .
+
+:worksWith rdfs:subPropertyOf :knows .
+:friend rdfs:subPropertyOf :knows .
+
+:knows rdfs:domain :Person ;
+       rdfs:range :Person .
+
+:hasAge rdfs:domain :Person ;
+        rdfs:range xsd:int .
+
+:hasPrice rdfs:domain :Product ;
+          rdfs:range xsd:int .
+
+:hasBrand rdfs:domain :Product ;
+          rdfs:range :Brand .
+
+:bought rdfs:domain :Person ;
+        rdfs:range :Product .
+
+:wrote rdfs:domain :Person ;
+       rdfs:range :Message .
+
+:inBlog rdfs:domain :Message ;
+        rdfs:range :Blog .
+
+#################################################################
+# RDF Graph Assertions (Figure 2: Running example RDF Graph G)
+#################################################################
+
+# Users
+:user1 rdf:type :Person ;
+       :hasName "Bill" ;
+       :hasAge 28 ;
+       :inCity "Madrid" ;
+       :worksWith :user2 ;
+       :friend :user3 ;
+       :bought :product1 ;
+       :gave :rating1 ;
+       :wrote :post1, :post2 .
+
+:user2 rdf:type :Student ;
+       :hasAge 40 ;
+       :wrote :post3 .
+
+:user3 rdf:type :Person ;
+       :hasAge 35 ;
+       :inCity "NY" ;
+       :wrote :post4 .
+
+# Products & Brands
+:product1 rdf:type :SmartPhone ;
+          :hasName "William" ;
+          :hasPrice 400 ;
+          :hasBrand :brand1 .
+
+# Ratings
+:rating1 rdf:type :Rating ;
+         :on :product1 ;
+         :hasValue "good deal" .
+
+# Blogs & Posts
+:post1 rdf:type :Message ;
+       :inBlog :blog1 .
+
+:post2 rdf:type :Message ;
+       :inBlog :blog1 .
+
+:post3 rdf:type :Message ;
+       :inBlog :blog2 .
+
+:post4 rdf:type :Message ;
+       :inBlog :blog2 .
+
+:blog1 rdf:type :Blog .
+:blog2 rdf:type :Blog .
